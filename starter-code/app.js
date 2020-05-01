@@ -35,7 +35,7 @@ return [add, string];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -51,12 +51,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
-
-}
+function sumAndMultiply(a, b, c){
+  var add = sum(a, b);
+  add = sum(add[0], c);
+  var product = multiply(a, b);
+  product = multiply(product[0], c);
+  var three = a + ' and ' + b + ' and ' + c + ' sum to ' + add[0] + '.';
+  var four = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product[0] +'.'
+  return [add[0], product[0], three, four]; 
+  }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
